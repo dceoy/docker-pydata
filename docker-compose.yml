@@ -1,0 +1,8 @@
+version: '3'
+
+services:
+  pydata:
+    container_name: pydata
+    build:
+      context: .
+    image: dceoy/pydata:latest
