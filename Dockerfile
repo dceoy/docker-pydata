@@ -10,11 +10,11 @@ RUN set -e \
       && apt-get clean
 
 RUN set -e \
-      && pip install -U pip numpy \
+      && pip install -U pip numpy pystan \
       && pip install -U airflow biopython bokeh cython csvkit docopt edward \
                         fbprophet feather-format flake8 ggplot jupyter keras \
-                        lightgbm luigi mxnet pandas plotly psutil pymc pystan \
-                        pytoml pyyaml scikit-learn scipy seaborn sphinx sympy \
-                        tensorflow theano xgboost
+                        lightgbm luigi mxnet pandas plotly psutil pymc pytoml \
+                        pyyaml scikit-learn scipy seaborn sphinx sympy \
+                        tensorflow xgboost
 
 ENTRYPOINT ["/usr/local/bin/python"]
