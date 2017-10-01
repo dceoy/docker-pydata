@@ -11,8 +11,10 @@ RUN set -e \
 
 RUN set -e \
       && pip install -U pip numpy \
-      && pip install -U biopython cython docopt edward flake8 ggplot jupyter \
-                        keras lightgbm mxnet pandas pymc pystan scikit-learn \
-                        scipy seaborn sphinx sympy tensorflow theano xgboost
+      && pip install -U airflow biopython bokeh cython csvkit docopt edward \
+                        fbprophet feather-format flake8 ggplot jupyter keras \
+                        lightgbm luigi mxnet pandas plotly psutil pymc pystan \
+                        pytoml pyyaml scikit-learn scipy seaborn sphinx sympy \
+                        tensorflow theano xgboost
 
-ENTRYPOINT ["python"]
+ENTRYPOINT ["/usr/local/bin/python"]
