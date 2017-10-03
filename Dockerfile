@@ -17,4 +17,6 @@ RUN set -e \
                         pyyaml scikit-learn scipy seaborn sphinx sympy \
                         tensorflow xgboost
 
-ENTRYPOINT ["/usr/local/bin/python"]
+EXPOSE 8888
+
+CMD ["/usr/local/bin/jupyter", "notebook", "--no-browser", "--allow-root", "--ip=127.0.0.1"]
