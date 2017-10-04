@@ -15,5 +15,5 @@ $ docker pull dceoy/pydata
 Run a container
 
 ```sh
-$ docker container run dceoy/pydata --version
+$ docker container run --rm -it -v $(pwd):work -w /work -u $(id -u):$(id -g) dceoy/pydata
 ```

@@ -6,6 +6,7 @@ services:
     build:
       context: .
     image: dceoy/pydata:latest
+    user: ${UID}:${GID}
     volumes:
-      - ${HOME}:/work
+      - .:/work
     working_dir: /work
