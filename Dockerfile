@@ -10,11 +10,12 @@ RUN set -e \
       && apt-get clean
 
 RUN set -e \
-      && pip install -U pip numpy pystan \
-      && pip install -U airflow biopython bokeh cython csvkit docopt edward \
-                        fbprophet feather-format flake8 ggplot jupyter keras \
-                        lightgbm luigi mxnet pandas plotly psutil pymc pytoml \
-                        pyyaml scikit-learn scipy seaborn sphinx sympy \
-                        tensorflow xgboost
+      && pip install -U --no-cache-dir pip numpy pystan \
+      && pip install -U --no-cache-dir airflow biopython bokeh cython csvkit \
+                                       docopt fbprophet feather-format \
+                                       flake8 ggplot jupyter keras lightgbm \
+                                       luigi mxnet pandas plotly psutil pymc \
+                                       pytoml pyyaml scikit-learn scipy \
+                                       seaborn sphinx sympy tensorflow xgboost
 
 ENTRYPOINT ["/usr/local/bin/python"]
