@@ -6,15 +6,6 @@ services:
     build:
       context: .
     image: dceoy/pydata:latest
-    ports:
-      - 8888:8888
     volumes:
       - ${HOME}:/work
     working_dir: /work
-    command:
-      - /usr/local/bin/jupyter
-      - notebook
-      - --no-browser
-      - --allow-root
-      - --ip=127.0.0.1
-      - --port=8888
