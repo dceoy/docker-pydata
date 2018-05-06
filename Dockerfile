@@ -1,4 +1,4 @@
-FROM python
+FROM python:latest
 
 RUN set -e \
       && ln -sf /bin/bash /bin/sh
