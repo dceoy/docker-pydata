@@ -11,12 +11,18 @@ RUN set -e \
       && apt-get clean
 
 RUN set -e \
-      && pip install -U --no-cache-dir pip numpy pystan \
-      && pip install -U --no-cache-dir airflow biopython bokeh cython csvkit \
-                                       docopt fbprophet feather-format \
-                                       flake8 ggplot jupyter keras lightgbm \
-                                       luigi mxnet pandas plotly psutil pymc \
-                                       pytoml pyyaml scikit-learn scipy \
-                                       seaborn sphinx sympy tensorflow xgboost
+      && pip install -U --no-cache-dir numpy \
+      && pip install -U --no-cache-dir \
+        ansible apache-airflow apache-libcloud awscli biopython bokeh \
+        cutadapt cython csvkit docopt fbprophet feather-format flake8 ggplot \
+        holoviews jupyter jupyter_contrib_nbextensions jupyterthemes keras \
+        lightgbm luigi matplotlib mock mxnet nose notedown numexpr pandas \
+        pandas-datareader pip plotly psutil pymc pyopenssl pypdf2 pysam \
+        pystan pytest pytoml pyyaml redis requests requests_oauthlib sabr \
+        scikit-learn scipy selenium seaborn sphinx sympy tensorflow \
+        testfixtures tornado webtest xgboost xmltodict
+
+RUN set -e \
+      && jt --theme oceans16 --toolbar --nbname --vimext
 
 ENTRYPOINT ["/usr/local/bin/python"]
