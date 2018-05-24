@@ -19,8 +19,8 @@ RUN set -e \
         lightgbm luigi matplotlib mock mxnet nose notedown numexpr pandas \
         pandas-datareader pip plotly psutil pymc pyopenssl pypdf2 pysam \
         pystan pytest pytoml pyyaml redis requests requests_oauthlib sabr \
-        scikit-learn scipy selenium seaborn sphinx sympy tensorflow \
-        testfixtures tornado webtest xgboost xmltodict
+        scikit-learn scipy selenium seaborn sphinx statsmodels sympy \
+        tensorflow testfixtures tornado webtest xgboost xmltodict
 
 RUN set -e \
       && jt --theme oceans16 --toolbar --nbname --vimext
