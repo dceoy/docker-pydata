@@ -8,5 +8,5 @@ services:
     image: dceoy/pydata:latest
     user: ${UID}:${GID}
     volumes:
-      - ${PWD}:/work
-    working_dir: /work
+      - ${PWD}:/wd
+    working_dir: /wd
