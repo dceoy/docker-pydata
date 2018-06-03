@@ -24,6 +24,7 @@ RUN set -e \
         xmltodict
 
 RUN set -e \
+      && jupyter contrib nbextension install --user \
       && jt --theme oceans16 --toolbar --nbname --vimext
 
 ENTRYPOINT ["/usr/local/bin/python"]
