@@ -1,0 +1,22 @@
+---
+version: '3'
+
+services:
+  nbconvert:
+    container_name: nbconvert
+    build:
+      context: ${PWD}
+    image: dceoy/pydata:latest
+    user: ${UID}:${GID}
+    volumes:
+      - ${PWD}:/wd
+    working_dir: /wd
+    entrypoint:
+      - jupyter
+    command:
+      - nbconvert
+      - --to=notebook
+      - --ExecutePreprocessor.timeout=-1
+      - --execute
+      - --inplace
+      - --ExecutePreprocessor.kernel_name=python
