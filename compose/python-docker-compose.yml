@@ -5,11 +5,18 @@ services:
   pydata:
     container_name: pydata
     build:
-      context: ${PWD}
+      context: ../build/latest
+      dockerfile: Dockerfile
     image: dceoy/pydata:latest
     user: ${UID}:${GID}
+    ports:
+      - 8888:8888
     volumes:
       - ${PWD}:/wd
     working_dir: /wd
     entrypoint:
-      - python
+      - jupyter
+    command:
+      - notebook
+      - --port=8888
+      - --ip=0.0.0.0

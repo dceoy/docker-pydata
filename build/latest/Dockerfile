@@ -22,7 +22,7 @@ RUN set -e \
         pandas pandas-datareader pip plotly psutil pymc pyopenssl pypdf2 \
         pysam pystan pytest pytoml pyyaml redis requests requests_oauthlib \
         sabr scikit-learn scipy selenium seaborn sphinx statsmodels sympy \
-        tensorflow testfixtures tornado webtest xgboost xmltodict
+        testfixtures tornado webtest xgboost xmltodict
 
 RUN set -e \
       && jupyter contrib nbextension install --user \

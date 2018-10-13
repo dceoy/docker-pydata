@@ -5,7 +5,8 @@ services:
   nbconvert:
     container_name: nbconvert
     build:
-      context: ${PWD}
+      context: ../build/latest
+      dockerfile: Dockerfile
     image: dceoy/pydata:latest
     user: ${UID}:${GID}
     volumes:

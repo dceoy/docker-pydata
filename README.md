@@ -18,5 +18,5 @@ Usage
 Run a container
 
 ```sh
-$ docker container run --rm -it -v ${PWD}:/work -w /work -u $(id -u):$(id -g) dceoy/pydata
+$ docker container run --rm -it -v ${PWD}:/wd -w /wd -u $(id -u):$(id -g) dceoy/pydata
 ```

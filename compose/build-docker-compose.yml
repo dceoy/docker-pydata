@@ -1,0 +1,19 @@
+---
+version: '3'
+
+services:
+  pydata:
+    build:
+      context: ../build/latest
+      dockerfile: Dockerfile
+    image: dceoy/pydata:latest
+  tf-cpu:
+    build:
+      context: ../build/tf-cpu
+      dockerfile: Dockerfile
+    image: dceoy/pydata:tf-cpu
+  tf-gpu:
+    build:
+      context: ../build/tf-gpu
+      dockerfile: Dockerfile
+    image: dceoy/pydata:tf-gpu
