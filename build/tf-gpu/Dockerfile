@@ -14,12 +14,13 @@ RUN set -e \
       && apt-get -y dist-upgrade \
       && apt-get -y install --no-install-recommends --no-install-suggests \
         apt-utils build-essential bzip2 ca-certificates curl fonts-liberation \
-        g++ gcc gfortran git inkscape jed libatlas-base-dev libblas-dev \
-        libbz2-dev libcurl4-gnutls-dev libfreetype6-dev libhdf5-serial-dev \
-        libicu-dev liblapack-dev liblzma-dev libncurses5-dev libpcre3-dev \
-        libpng12-dev libreadline-dev libsm6 libxext-dev libxrender1 libz-dev \
-        libzmq3-dev lmodern locales netcat pandoc pkg-config python3.6-dev \
-        rsync sudo texlive-fonts-extra texlive-fonts-recommended \
+        g++ gcc gfortran git graphviz inkscape jed libatlas-base-dev \
+        libblas-dev libbz2-dev libcurl4-gnutls-dev libfreetype6-dev \
+        libgl1-mesa-glx libhdf5-dev libicu-dev liblapack-dev liblzma-dev \
+        libncurses5-dev libpcre3-dev libpng12-dev libreadline-dev libsm6 \
+        libxext-dev libxrender1 libz-dev libzmq3-dev lmodern locales netcat \
+        openmpi-bin pandoc pkg-config python3.6-dev rsync sudo \
+        texlive-fonts-extra texlive-fonts-recommended \
         texlive-generic-recommended texlive-latex-base texlive-latex-extra \
         texlive-xetex unzip wget zip zlib1g-dev \
       && apt-get -y autoremove \
@@ -37,14 +38,15 @@ RUN set -e \
       && /usr/bin/python3.6 /tmp/get-pip.py \
       && pip install -U --no-cache-dir numpy tensorflow-gpu \
       && pip install -U --no-cache-dir \
-        ansible apache-libcloud awscli biopython bokeh cutadapt cython csvkit \
-        docopt fbprophet feather-format flake8 ggplot holoviews jupyter \
-        jupyter_contrib_nbextensions jupyterhub jupyterlab jupyterthemes \
-        keras lightgbm luigi matplotlib mock mxnet nose notedown numexpr \
-        pandas pandas-datareader pip plotly psutil pymc pyopenssl pypdf2 \
-        pysam pystan pytest pytoml pyyaml redis requests requests_oauthlib \
-        sabr scikit-learn scipy selenium seaborn sphinx statsmodels sympy \
-        testfixtures tornado webtest xgboost xmltodict \
+        ansible apache-libcloud awscli biopython bokeh cntk-gpu cutadapt \
+        cython csvkit docopt fbprophet feather-format flake8 ggplot \
+        holoviews jupyter jupyter_contrib_nbextensions jupyterhub jupyterlab \
+        jupyterthemes keras lightgbm luigi matplotlib mock mxnet nose \
+        notedown numexpr pandas pandas-datareader pip plotly psutil pymc \
+        pyopenssl pypdf2 pysam pystan pytest pytoml pyyaml redis requests \
+        requests_oauthlib sabr scikit-learn scipy selenium seaborn \
+        sklearn-pandas sphinx statsmodels sympy testfixtures tornado webtest \
+        xgboost xmltodict torch torchvision
       && rm -f /tmp/get-pip.py
 
 RUN set -e \

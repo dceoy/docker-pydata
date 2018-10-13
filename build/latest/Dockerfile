@@ -7,7 +7,7 @@ RUN set -e \
       && apt-get -y update \
       && apt-get -y dist-upgrade \
       && apt-get -y install --no-install-recommends --no-install-suggests \
-                            apt-utils gfortran liblapack-dev \
+                            apt-utils gfortran liblapack-dev openmpi-bin \
       && apt-get -y autoremove \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/*
@@ -21,8 +21,9 @@ RUN set -e \
         keras lightgbm luigi matplotlib mock mxnet nose notedown numexpr \
         pandas pandas-datareader pip plotly psutil pymc pyopenssl pypdf2 \
         pysam pystan pytest pytoml pyyaml redis requests requests_oauthlib \
-        sabr scikit-learn scipy selenium seaborn sphinx statsmodels sympy \
-        testfixtures tornado webtest xgboost xmltodict
+        sabr scikit-learn scipy selenium seaborn sklearn-pandas sphinx \
+        statsmodels sympy testfixtures torch torchvision tornado webtest \
+        xgboost xmltodict
 
 RUN set -e \
       && jupyter contrib nbextension install --user \
