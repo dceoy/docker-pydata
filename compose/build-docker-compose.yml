@@ -17,3 +17,13 @@ services:
       context: ../build/tf-gpu
       dockerfile: Dockerfile
     image: dceoy/pydata:tf-gpu
+  dnn-cpu:
+    build:
+      context: ../build/dnn-cpu
+      dockerfile: Dockerfile
+    image: dceoy/pydata:dnn-cpu
+  dnn-gpu:
+    build:
+      context: ../build/dnn-gpu
+      dockerfile: Dockerfile
+    image: dceoy/pydata:dnn-gpu

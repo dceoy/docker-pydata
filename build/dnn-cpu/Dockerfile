@@ -15,15 +15,15 @@ RUN set -e \
 RUN set -e \
       && pip install -U --no-cache-dir numpy \
       && pip install -U --no-cache-dir \
-        ansible apache-libcloud awscli bcolz biopython bokeh cutadapt cython \
-        csvkit docopt fbprophet feather-format flake8 ggplot h5py holoviews \
-        jupyter jupyter_contrib_nbextensions jupyterhub jupyterlab \
+        ansible apache-libcloud awscli bcolz biopython bokeh cntk cutadapt \
+        cython csvkit docopt fbprophet feather-format flake8 ggplot h5py \
+        holoviews jupyter jupyter_contrib_nbextensions jupyterhub jupyterlab \
         jupyterthemes keras lightgbm luigi matplotlib mkl mock mxnet nose \
         notebook notedown numexpr pandas pandas-datareader pillow pip plotly \
         psutil pydot pymc pyopenssl pypdf2 pysam pystan pytest pytoml pyyaml \
         redis requests requests_oauthlib sabr scikit-learn scipy selenium \
         seaborn six sklearn-pandas sphinx statsmodels sympy tensorflow \
-        testfixtures tornado webtest xgboost xmltodict
+        testfixtures torch torchvision tornado webtest xgboost xmltodict
 
 RUN set -e \
       && jupyter contrib nbextension install --user \
