@@ -4,9 +4,6 @@ version: '3'
 services:
   pydata:
     container_name: pydata
-    build:
-      context: ../build/latest
-      dockerfile: Dockerfile
     image: dceoy/pydata:latest
     user: ${UID}:${GID}
     userns_mode: host
