@@ -1,4 +1,4 @@
-FROM nvidia/cuda:9.0-cudnn7-devel
+FROM nvidia/cuda:9.0-cudnn7-runtime
 
 ADD https://bootstrap.pypa.io/get-pip.py /tmp/get-pip.py
 
@@ -35,6 +35,8 @@ ENV LANG en_US.UTF-8
 ENV LANGUAGE en_US.UTF-8
 
 RUN set -e \
+      && ln -sf /usr/bin/python3.6 /usr/bin/python \
+      && ln -sf /usr/bin/python3.6 /usr/bin/python3 \
       && /usr/bin/python3.6 /tmp/get-pip.py \
       && pip install -U --no-cache-dir numpy tensorflow-gpu \
       && pip install -U --no-cache-dir \
@@ -53,4 +55,4 @@ RUN set -e \
       && jupyter contrib nbextension install --user \
       && jt --theme oceans16 --toolbar --nbname --vimext
 
-ENTRYPOINT ["/usr/local/bin/python"]
+ENTRYPOINT ["/usr/bin/python"]
