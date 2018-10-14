@@ -9,10 +9,12 @@ services:
       dockerfile: Dockerfile
     image: dceoy/pydata:latest
     user: ${UID}:${GID}
+    userns_mode: host
     ports:
       - 8888:8888
     volumes:
       - ${PWD}:/wd
+      - jupyter-runtime:/.local/share/jupyter/runtime
     working_dir: /wd
     entrypoint:
       - jupyter
@@ -23,3 +25,6 @@ services:
       - --notebook-dir=.
       - --allow-root
       - --no-browser
+
+volumes:
+  jupyter-runtime:

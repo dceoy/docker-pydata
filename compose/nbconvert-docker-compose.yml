@@ -9,6 +9,7 @@ services:
       dockerfile: Dockerfile
     image: dceoy/pydata:latest
     user: ${UID}:${GID}
+    userns_mode: host
     volumes:
       - ${PWD}:/wd
     working_dir: /wd
