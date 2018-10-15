@@ -26,7 +26,7 @@ RUN set -e \
         testfixtures torch torchvision tornado webtest xgboost xmltodict
 
 RUN set -e \
-      && jupyter contrib nbextension install --user \
+      && jupyter contrib nbextension install --system \
       && jt --theme oceans16 --toolbar --nbname --vimext
 
 ENTRYPOINT ["/usr/local/bin/python"]

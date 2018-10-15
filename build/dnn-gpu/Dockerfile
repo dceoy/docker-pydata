@@ -52,7 +52,7 @@ RUN set -e \
       && rm -f /tmp/get-pip.py
 
 RUN set -e \
-      && jupyter contrib nbextension install --user \
+      && jupyter contrib nbextension install --system \
       && jt --theme oceans16 --toolbar --nbname --vimext
 
 ENTRYPOINT ["/usr/bin/python"]
