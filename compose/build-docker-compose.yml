@@ -7,11 +7,6 @@ services:
       context: ../build/latest
       dockerfile: Dockerfile
     image: dceoy/pydata:latest
-  pydata-slim:
-    build:
-      context: ../build/slim
-      dockerfile: Dockerfile
-    image: dceoy/pydata:slim
   pydata-tf-cpu:
     build:
       context: ../build/tf-cpu

@@ -25,8 +25,15 @@ RUN set -e \
         seaborn six sklearn-pandas sphinx statsmodels sympy testfixtures \
         tornado webtest xgboost xmltodict
 
+ENV HOME /home/notebook
+
 RUN set -e \
+      && mkdir ${HOME} \
       && jupyter contrib nbextension install --system \
-      && jt --theme oceans16 --toolbar --nbname --vimext
+      && jt --theme oceans16 --toolbar --nbname --vimext \
+      && find ${HOME} -exec chmod 777 {} \;
+
+EXPOSE 6006
+EXPOSE 8888
 
 ENTRYPOINT ["/usr/local/bin/python"]
