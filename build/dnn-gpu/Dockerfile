@@ -19,8 +19,8 @@ RUN set -e \
         libgl1-mesa-glx libhdf5-dev libicu-dev liblapack-dev liblzma-dev \
         libncurses5-dev libpcre3-dev libpng12-dev libreadline-dev libsm6 \
         libxext-dev libxrender1 libz-dev libzmq3-dev lmodern locales netcat \
-        openmpi-bin pandoc pkg-config python3.6-dev rsync sudo \
-        texlive-fonts-extra texlive-fonts-recommended \
+        openmpi-bin p7zip-full pandoc pbzip2 pigz pkg-config python3.6-dev \
+        rsync sudo texlive-fonts-extra texlive-fonts-recommended \
         texlive-generic-recommended texlive-latex-base texlive-latex-extra \
         texlive-xetex unzip wget zip zlib1g-dev \
       && apt-get -y autoremove \

@@ -7,7 +7,7 @@ RUN set -e \
       && apt-get -y update \
       && apt-get -y dist-upgrade \
       && apt-get -y install --no-install-recommends --no-install-suggests \
-                            apt-utils gfortran liblapack-dev \
+        apt-utils gfortran liblapack-dev p7zip-full pbzip2 pigz \
       && apt-get -y autoremove \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/*
