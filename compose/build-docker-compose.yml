@@ -7,23 +7,13 @@ services:
       context: ../build/latest
       dockerfile: Dockerfile
     image: dceoy/pydata:latest
-  pydata-tf-cpu:
-    build:
-      context: ../build/tf-cpu
-      dockerfile: Dockerfile
-    image: dceoy/pydata:tf-cpu
-  pydata-tf-gpu:
-    build:
-      context: ../build/tf-gpu
-      dockerfile: Dockerfile
-    image: dceoy/pydata:tf-gpu
-  pydata-dnn-cpu:
-    build:
-      context: ../build/dnn-cpu
-      dockerfile: Dockerfile
-    image: dceoy/pydata:dnn-cpu
   pydata-dnn-gpu:
     build:
       context: ../build/dnn-gpu
       dockerfile: Dockerfile
     image: dceoy/pydata:dnn-gpu
+  pydata-dnn-cpu:
+    build:
+      context: ../build/dnn-cpu
+      dockerfile: Dockerfile
+    image: dceoy/pydata:dnn-cpu

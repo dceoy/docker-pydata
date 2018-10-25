@@ -10,14 +10,14 @@ services:
     ports:
       - 8888:8888
     volumes:
-      - ${PWD}:/wd
-    working_dir: /wd
+      - ${PWD}:/nb
+    working_dir: /nb
     entrypoint:
       - jupyter
     command:
       - notebook
       - --port=8888
       - --ip=0.0.0.0
-      - --notebook-dir=.
+      - --notebook-dir=/nb
       - --allow-root
       - --no-browser

@@ -12,6 +12,15 @@ Pull the image from [Docker Hub](https://hub.docker.com/r/dceoy/pydata/).
 $ docker pull dceoy/pydata
 ```
 
+Image tags:
+
+- `latest`
+  - Data analytical stack based on the latest Python
+- `dnn-gpu`
+  - Data analytical stack with deep learning libraries for GPU
+- `dnn-cpu`
+  - Data analytical stack with deep learning libraries for CPU
+
 Usage
 -----
 
