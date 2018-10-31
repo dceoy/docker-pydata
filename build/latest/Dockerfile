@@ -4,7 +4,7 @@ RUN set -e \
       && apt-get -y update \
       && apt-get -y dist-upgrade \
       && apt-get -y install --no-install-recommends --no-install-suggests \
-        libbz2-dev liblzma-dev gfortran zlib1g-dev \
+        g++ libbz2-dev liblzma-dev make gfortran zlib1g-dev \
       && apt-get -y autoremove \
       && apt-get clean \
       && rm -rf /var/lib/apt/lists/*
