@@ -21,3 +21,4 @@ services:
       - --notebook-dir=/nb
       - --allow-root
       - --no-browser
+      - --NotebookApp.token=''
