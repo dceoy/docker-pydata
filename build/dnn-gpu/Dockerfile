@@ -21,7 +21,7 @@ RUN set -e \
         pillow plotly psutil pyarrow pydot pymc pyopenssl pypdf2 pysam \
         pytest pytoml pyyaml redis requests requests_oauthlib sabr \
         scikit-learn scipy selenium seaborn six sklearn-pandas sphinx \
-        statsmodels sympy tensorflow-gpu testfixtures torch torchvision tqdm \
+        statsmodels sympy tensorflow testfixtures torch torchvision tqdm \
         webtest xgboost xmltodict
 
 ENTRYPOINT ["/usr/local/bin/ipython"]
