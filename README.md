@@ -3,13 +3,15 @@ docker-pydata
 
 Dockerfile for data analysis with Python
 
+[![CI to Docker Hub](https://github.com/dceoy/docker-pydata/actions/workflows/docker-publish.yml/badge.svg)](https://github.com/dceoy/docker-pydata/actions/workflows/docker-publish.yml)
+
 Docker image
 ------------
 
 Pull the image from [Docker Hub](https://hub.docker.com/r/dceoy/pydata/).
 
 ```sh
-$ docker pull dceoy/pydata
+$ docker image pull dceoy/pydata
 ```
 
 Image tags:
