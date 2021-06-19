@@ -13,7 +13,7 @@ RUN set -e \
       && pip install -U --no-cache-dir numpy pip pystan \
       && pip install -U --no-cache-dir \
         apache-airflow apache-libcloud autopep8 awscli bash_kernel bcolz \
-        biopython bokeh cutadapt cython csvkit docopt fbprophet \
+        biopython bokeh cutadapt cython csvkit docopt prophet \
         feather-format flake8 flake8-bugbear flake8-isort ggplot h5py \
         holoviews jupyter jupyter_contrib_nbextensions jupyterhub jupyterlab \
         jupyterthemes keras lightgbm luigi matplotlib mkl mock mxnet nose \
